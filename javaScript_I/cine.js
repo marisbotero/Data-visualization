@@ -12,8 +12,6 @@ function canWatchStarWars7(name, age, isWithAdult = false){
 		alert('${name} puede pasar a ver la pelicula')
 	} else if(isWithAdult){
 		alert('${name} puede pasar a ver la pelicula, porque esta con un adulto')
-
-
 	}
 
 	else{
