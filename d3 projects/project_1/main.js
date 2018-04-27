@@ -12,6 +12,7 @@ function histogram(tweetsData) {
      
      var xAxis = d3.axisBottom()
      .scale(xScale).ticks(5)   
+     
 
      var histoChart = d3.histogram();
      
@@ -29,7 +30,7 @@ function histogram(tweetsData) {
            //console.log(d);
            d3.select(this)
            .style("fill","aqua");
-          
+
           })   
       .attr("x", d => xScale(d.x0))    
       .attr("y", d => yScale(d.length))    
