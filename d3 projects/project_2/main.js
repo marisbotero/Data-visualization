@@ -29,17 +29,29 @@ d3.csv("movies.csv", dataViz);
     .enter().append("path")
     .style("fill", d => fillScale(d.key))  
     .attr("stroke", "black")
+    .on("mouseover", function(d) {
+      d3.select(this).style('fill', '#00b2ff'); 
+    })
     .attr("d", d => stackArea(d));
 
     const yAxis = d3.axisRight()   
     .scale(yScale)
     
+  
+    
 
     d3.select("svg")
     .append("g")  
     .call(yAxis)
+    
+
+    
+
+    
 
   
   }
+
+
 
   
