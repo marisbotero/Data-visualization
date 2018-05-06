@@ -11,7 +11,7 @@ d3.csv("movies.csv", dataViz);
 
     var fillScale = d3.scaleOrdinal()    
     .domain(movies)    
-    .range(["aqua", "blueviolet", "yellowgreen", "royalblue", "orange", "violet"])
+    .range(["#ffffcc", "#c7e9b4", "#7fcdbb", "#41b6c4", "#2c7fb8", "#253494"])
 
     stackLayout = d3.stack()     
     .keys(movies)    
@@ -31,8 +31,13 @@ d3.csv("movies.csv", dataViz);
     .attr("stroke", "black")
     .attr("d", d => stackArea(d));
 
+    const yAxis = d3.axisRight()   
+    .scale(yScale)
     
 
+    d3.select("svg")
+    .append("g")  
+    .call(yAxis)
 
   
   }
